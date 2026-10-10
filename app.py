@@ -12,11 +12,11 @@ print(channel_sales)
 # This will show which product category generates the highest total profit. Using the groupby function, we can group the data by product category and calculate the total profit for each category. Then, we can sort the results in descending order to see which category has the highest total profit.
 category_profit = df.groupby("Product_Category")["Profit"].sum()
 category_profit = category_profit.sort_values(ascending=False)
-# print("Total Profit by Product Category:")
-# print(category_profit)
+print("Total Profit by Product Category:")
+print(category_profit)
 
 # Create the graph
-""" plt.figure(figsize=(10, 6))
+plt.figure(figsize=(10, 6))
 
 category_profit.plot(kind="bar")
 
@@ -26,4 +26,4 @@ plt.ylabel("Total Profit")
 plt.xticks(rotation=0)
 plt.tight_layout()
 
-plt.show() """
+plt.show()
